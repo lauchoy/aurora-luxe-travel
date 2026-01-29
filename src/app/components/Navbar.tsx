@@ -20,7 +20,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Destinations', href: '#destinations' },
     { name: 'Experiences', href: '#experiences' },
-    { name: 'About', href: '#about' },
+    { name: 'Membership', href: '#membership' },
     { name: 'Contact', href: '#contact' },
   ];
 
