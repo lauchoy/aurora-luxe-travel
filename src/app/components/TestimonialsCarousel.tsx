@@ -193,9 +193,14 @@ export default function TestimonialsCarousel() {
   const [isPaused, setIsPaused] = useState(false);
   const [direction, setDirection] = useState(0);
 
+  // Early return if no testimonials
+  if (!testimonials || testimonials.length === 0) {
+    return null;
+  }
+
   // Auto-play functionality
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || testimonials.length === 0) return;
 
     const interval = setInterval(() => {
       setDirection(1);
@@ -206,8 +211,10 @@ export default function TestimonialsCarousel() {
   }, [isPaused]);
 
   const goToSlide = useCallback((index: number) => {
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
+    if (index >= 0 && index < testimonials.length) {
+      setDirection(index > currentIndex ? 1 : -1);
+      setCurrentIndex(index);
+    }
   }, [currentIndex]);
 
   const goToPrevious = useCallback(() => {
@@ -234,6 +241,12 @@ export default function TestimonialsCarousel() {
       opacity: 0,
     }),
   };
+
+  // Get current testimonial with safety check
+  const currentTestimonial = testimonials[currentIndex];
+  if (!currentTestimonial) {
+    return null;
+  }
 
   return (
     <section 
@@ -333,7 +346,9 @@ export default function TestimonialsCarousel() {
                 }}
                 className="absolute inset-0"
               >
-                <TestimonialCard testimonial={testimonials[currentIndex]} />
+                {currentTestimonial && (
+                  <TestimonialCard testimonial={currentTestimonial} />
+                )}
               </motion.div>
             </AnimatePresence>
           </div>
