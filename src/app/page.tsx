@@ -5,6 +5,7 @@ import SignatureExperiences from './components/SignatureExperiences';
 import MembershipTiers from './components/MembershipTiers';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
 import ConciergeForm from './components/ConciergeForm';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <MembershipTiers />
       <TestimonialsCarousel />
       <ConciergeForm />
+      <Footer />
     </main>
   );
 }
