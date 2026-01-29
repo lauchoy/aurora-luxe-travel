@@ -1,6 +1,8 @@
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import DestinationsGrid from './components/DestinationsGrid';
+import SignatureExperiences from './components/SignatureExperiences';
+import MembershipTiers from './components/MembershipTiers';
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <DestinationsGrid />
+      <SignatureExperiences />
+      <MembershipTiers />
     </main>
   );
 }
