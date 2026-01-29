@@ -4,6 +4,7 @@ import DestinationsGrid from './components/DestinationsGrid';
 import SignatureExperiences from './components/SignatureExperiences';
 import MembershipTiers from './components/MembershipTiers';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
+import ConciergeForm from './components/ConciergeForm';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SignatureExperiences />
       <MembershipTiers />
       <TestimonialsCarousel />
+      <ConciergeForm />
     </main>
   );
 }
