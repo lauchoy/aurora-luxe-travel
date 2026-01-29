@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import DestinationsGrid from './components/DestinationsGrid';
 import SignatureExperiences from './components/SignatureExperiences';
 import MembershipTiers from './components/MembershipTiers';
+import TestimonialsCarousel from './components/TestimonialsCarousel';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <DestinationsGrid />
       <SignatureExperiences />
       <MembershipTiers />
+      <TestimonialsCarousel />
     </main>
   );
 }
